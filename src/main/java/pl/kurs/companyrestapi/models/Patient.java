@@ -24,4 +24,14 @@ public class Patient {
     private String firstName;
     private String lastName;
     private String email;
+
+    public Patient(String animalName, String animalSpecies, String race, Long age, String firstName, String lastName, String email) {
+        this.animalName = animalName;
+        this.animalSpecies = animalSpecies;
+        this.race = race;
+        this.age = age;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 }
