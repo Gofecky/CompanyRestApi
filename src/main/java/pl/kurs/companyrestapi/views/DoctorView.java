@@ -18,6 +18,7 @@ public class DoctorView {
     private String animalSpecialization;
     private BigDecimal hourSalary;
     private String nip;
+    private boolean isFired;
 
     public static DoctorView buildDoctorView(Doctor doctor) {
         return DoctorView.builder()
@@ -27,6 +28,7 @@ public class DoctorView {
                 .animalSpecialization(doctor.getAnimalSpecialization())
                 .hourSalary(doctor.getHourSalary())
                 .nip(doctor.getNip())
+                .isFired(doctor.isFired())
                 .build();
     }
 }

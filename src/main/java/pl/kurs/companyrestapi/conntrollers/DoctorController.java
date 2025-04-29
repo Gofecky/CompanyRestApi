@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.kurs.companyrestapi.commands.CreateDoctorCommand;
-import pl.kurs.companyrestapi.commands.FireDoctorCommand;
 import pl.kurs.companyrestapi.exceptions.DoctorNotFound;
 import pl.kurs.companyrestapi.services.DoctorService;
 import pl.kurs.companyrestapi.views.DoctorListView;
@@ -41,8 +40,8 @@ public class DoctorController {
     }
 
     @PutMapping("/fire-doctor/{id}")
-    ResponseEntity<String> fireDoctor(@RequestBody FireDoctorCommand fireDoctorCommand, @PathVariable Long id) throws DoctorNotFound {
-        doctorService.fireDoctor(fireDoctorCommand, id);
+    ResponseEntity<String> fireDoctor(@PathVariable Long id) throws DoctorNotFound {
+        doctorService.fireDoctor(id);
         return ResponseEntity.ok(DOCTOR_SUCCESSFULLY_FIRED);
     }
 }

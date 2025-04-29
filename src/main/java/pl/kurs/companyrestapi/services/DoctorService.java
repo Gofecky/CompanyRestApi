@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import pl.kurs.companyrestapi.commands.CreateDoctorCommand;
-import pl.kurs.companyrestapi.commands.FireDoctorCommand;
 import pl.kurs.companyrestapi.exceptions.DoctorNotFound;
 import pl.kurs.companyrestapi.models.Doctor;
 import pl.kurs.companyrestapi.repositories.DoctorRepository;
@@ -42,9 +41,9 @@ public class DoctorService {
     }
 
 
-    public void fireDoctor(FireDoctorCommand fireDoctorCommand, Long id) throws DoctorNotFound {
+    public void fireDoctor(Long id) throws DoctorNotFound {
         Doctor doctor = getDoctor(id);
-        fireDoctorCommand.fireDoctor(doctor);
+        doctor.setFired(true);
         doctorRepository.save(doctor);
     }
 }

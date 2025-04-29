@@ -26,6 +26,10 @@ public class Doctor {
     @Column(name = "is_fired")
     private boolean isFired;
 
+    public boolean isFired() {
+        return isFired;
+    }
+
     public Doctor(String firstName, String lastName, String medicalSpecialization, String animalSpecialization, BigDecimal hourSalary, String nip) {
         this.firstName = firstName;
         this.lastName = lastName;
