@@ -4,7 +4,7 @@
     "nixpacksPlan": {
       "providers": ["java"]
     },
-    "buildCommand": "mvn package",
+    "buildCommand": "./mvnw clean package -DskipTests",
     "startCommand": "java -jar target/*.jar"
   }
 }
