@@ -1,5 +1,7 @@
 {
   "build": {
-    "dockerfilePath": "Dockerfile"
+    "builder": "NIXPACKS",
+    "buildCommand": "mvn package",
+    "startCommand": "java -jar target/*.jar"
   }
 }
