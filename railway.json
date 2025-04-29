@@ -1,6 +1,9 @@
 {
   "build": {
     "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "providers": ["java"]
+    },
     "buildCommand": "mvn package",
     "startCommand": "java -jar target/*.jar"
   }
