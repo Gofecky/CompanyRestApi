@@ -1,5 +1,6 @@
 package pl.kurs.companyrestapi.services;
 
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+
 public class DoctorService {
 
     private final DoctorRepository doctorRepository;
@@ -29,7 +31,7 @@ public class DoctorService {
         return DoctorView.buildDoctorView(doctor);
     }
 
-    private Doctor getDoctor(Long id) throws DoctorNotFound {
+    public Doctor getDoctor(Long id) throws DoctorNotFound {
         return doctorRepository.findById(id).orElseThrow(DoctorNotFound::new);
     }
 

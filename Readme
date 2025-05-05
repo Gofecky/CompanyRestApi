@@ -1,0 +1,21 @@
+Overwiev
+Vetapp is backend solution for vetclinic operations .This API is designed using java Springboot
+architecture for handling essential clinic operations like appointments, patient management, doctor schedules, and more.
+
+In Doctor Controller you can manage such operations as:
+-adding
+-fire him(soft delete)
+-getting by id
+-getting all of doctors in list
+
+In Patient controller you can :
+- adding
+-checking by id
+-getting all in list
+
+In appointment controller you can:
+-check for availability based on medical and species specialization
+-you are able to create a new appointment
+-confirming or canceling appointment
+
+Also all not confirmed appointmets are cleaned every hour from schedules.
